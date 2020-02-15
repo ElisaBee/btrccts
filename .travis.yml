@@ -12,7 +12,7 @@ before_install:
 # - pip3 install -r requirements.txt
 # - pip3 install --index-url https://test.pypi.org/simple/ --upgrade setuptools pip btrccts
 - pip3 install --upgrade setuptools pip btrccts
-- bash -c 'req="$(pip freeze | grep -v btrccts)" ; pip3 install hashin ; touch requirements.txt ; hashin ${req} ; cat requirements.txt'
+- bash -c 'req="$(pip freeze)" ; pip3 install hashin ; touch requirements.txt ; hashin ${req} ; cat requirements.txt'
 # - bash -c 'pip3 install pipdeptree ; pipdeptree -fl ; exit 0'
 # Run algo to see all needed requirements are here
 - python3 examples/print_time.py --start-date 2017-01-01 --end-date 2017-01-02
